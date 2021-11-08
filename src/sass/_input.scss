@@ -15,7 +15,7 @@
   &__group {
     border: 0;
     padding: 0;
-    margin: convertUnit(32, rem) 0;
+    margin-bottom: convertUnit(32, rem);
 
     &--tip {
       display: grid;
