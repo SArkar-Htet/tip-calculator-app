@@ -9,6 +9,12 @@
   <title>Frontend Mentor | Tip calculator app</title>
 
   <link rel="stylesheet" href="./dist/css/style.min.css">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
@@ -16,8 +22,56 @@
   </style>
 </head>
 <body>
+  <header class="header">
+    <img src="./images/logo.svg" class="app__logo" alt="App Logo">
+  </header>
 
-  Bill
+  <main class="app">
+    <h1 class="sr-only">Calculator to calculate tip and total amount</h1>
+    <form class="app__body">
+      <div class="app__input__wrapper">
+        <div class="app__input__group app__input__group--bill">
+          <label class="app__label app__label--bill" for="bill">Bill</label>
+          <input type="text" name="bill" id="bill" class="app__input app__input--bill" value="142.55">
+        </div>
+
+        <fieldset class="app__input__group app__input__group--tip">
+          <legend class="app__label app__label--tip">Select Tip %</legend>
+          <button type="button" class="btn btn--tip">5%</button>
+          <button type="button" class="btn btn--tip">10%</button>
+          <button type="button" class="btn btn--tip">15%</button>
+          <button type="button" class="btn btn--tip">25%</button>
+          <button type="button" class="btn btn--tip">50%</button>
+          <input class="app__input app__input--tip" placeholder="Custom" />
+        </fieldset>
+
+        <div class="app__input__group app__input__group--people">
+          <label class="app__label app__label--people" for="people">Number of People</label>
+          <input type="text" id="people" class="app__input app__input--people">
+        </div>
+      </div>
+
+      <div class="app__amount">
+        <div class="amount__wrapper tip__amount">
+          <div class="label tip__amount__label">
+            Tip Amount<span class="label__unit">/ person</span>
+          </div>
+          <div class="amount tip__amount">$4.27</div>
+        </div>
+
+        <div class="amount__wrapper total__amount">
+          <div class="label total__amount__label">
+            Total<span class="label__unit">/ person</span>
+          </div>
+        </div>
+        <div class="amount total__amount">$32.79</div>
+
+        <button type="reset" class="btn reset__btn">Reset</button>
+      </div>
+    </form>
+  </main>
+
+  <!-- Bill
 
   Select Tip %
   5%
@@ -35,11 +89,13 @@
   Total
   / person
 
-  Reset
+  Reset -->
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer class="footer">
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
 </body>
 </html>

@@ -11,7 +11,8 @@ $veryLightGrayishCyan: hsl(189, 41%, 97%);
 $white: hsl(0, 0%, 100%);
 
 // Typography
-$font-md: convertUnit(24, "rem");
+$font-sm: convertUnit(16, rem);
+$font-md: convertUnit(24, rem);
 
 // Font Weight
 $font-light: 400;

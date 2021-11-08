@@ -1,0 +1,76 @@
+.app {
+  width: 100%;
+  
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: $white;
+    margin-top: convertUnit(41, rem);
+    padding: 0 convertUnit(22, rem); 
+    border-radius: convertUnit(22, rem); 
+  }
+
+  &__label {
+    display: block;
+    padding: 0;
+    color: $veryDarkGrayishCyan;
+    font-size: $font-sm;
+    font-weight: $font-bold;
+    margin-bottom: convertUnit(10, rem);
+
+    &--bill {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: convertUnit(50, rem);
+        left: convertUnit(16, rem);
+        width: 1rem;
+        height: 1rem;
+        background-image: url("../../images/icon-dollar.svg");
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--tip {
+      margin-bottom: convertUnit(19, rem);
+    }
+
+    &--people {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: convertUnit(50, rem);
+        left: convertUnit(16, rem);
+        width: 1rem;
+        height: 1rem;
+        background-image: url("../../images/icon-person.svg");
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  .btn {
+    width: 100%;
+    height: convertUnit(48, rem);
+    font-size: $font-md;
+    font-weight: $font-bold;
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    border-radius: convertUnit(5, rem);
+    cursor: pointer;
+
+    &, &:focus, &:active {
+      border: none;
+      outline: none;
+      box-shadow: none;
+    }
+
+    &--tip {
+      background-color: $DarkCyan;
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.app__input {
+  width: 100%;
+  height: convertUnit(48, rem);
+  padding: 0 convertUnit(16, rem) 0 convertUnit(40, rem);
+  background-color: $veryLightGrayishCyan;
+  font-family: 'Space Mono', monospace;
+  font-size: $font-md;
+  color: $DarkCyan;
+  font-weight: $font-bold;
+  text-align: right;
+  border: none;
+  border-radius: convertUnit(5, rem);
+  cursor: pointer;
+
+  &__group {
+    border: 0;
+    padding: 0;
+    margin: convertUnit(32, rem) 0;
+
+    &--tip {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      justify-content: center;
+      gap: convertUnit(16, rem);
+    }
+  }
+}
