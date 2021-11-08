@@ -67,6 +67,15 @@
       box-shadow: none;
     }
 
+    &:hover {
+      background-color: $strongCyanA;
+      color: $DarkCyan;
+    }
+
+    &:active {
+      color: $white;
+    }
+
     &--tip {
       background-color: $DarkCyan;
       color: $white;
