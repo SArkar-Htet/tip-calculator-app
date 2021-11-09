@@ -60,6 +60,7 @@
     font-family: 'Space Mono', monospace;
     border-radius: convertUnit(5, rem);
     cursor: pointer;
+    transition: all 200ms ease-in-out;
 
     &, &:focus, &:active {
       border: none;
@@ -67,18 +68,22 @@
       box-shadow: none;
     }
 
-    &:hover {
-      background-color: $strongCyanA;
-      color: $DarkCyan;
-    }
-
-    &:active {
-      color: $white;
-    }
-
     &--tip {
       background-color: $DarkCyan;
       color: $white;
+
+      &:hover {
+        background-color: $strongCyanA;
+        color: $DarkCyan;
+      }
+    }
+
+    &--reset {
+      margin-top: convertUnit(32, rem);
+      background-color: $strongCyan;
+      color: $DarkCyan;
+      text-transform: uppercase;
+      opacity: 0.3;
     }
   }
 }

@@ -1,0 +1,28 @@
+.app__amount {
+  font-size: convertUnit(32, rem);
+  color: $strongCyan;
+
+  &__wrapper {
+    padding: convertUnit(24, rem);
+    background-color: $DarkCyan;
+    border-radius: 16px;
+    font-weight: $font-bold;
+  }
+
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: convertUnit(16, rem) 0;
+  }
+
+  &__label {
+    color: $white;
+
+    &__unit {
+      display: block;
+      font-size: convertUnit(14, rem);
+      color: $darkGrayishCyan;
+    }
+  }
+}
