@@ -17,8 +17,8 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    /* .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); } */
   </style>
 </head>
 <body>
@@ -31,8 +31,8 @@
     <form class="app__body">
       <div class="app__input__wrapper">
         <div class="app__input__group app__input__group--bill">
-          <label class="app__label app__label--bill" for="bill">Bill</label>
-          <input type="text" name="bill" id="bill" class="app__input app__input--bill" placeholder="0">
+          <label class="app__label app__label--bill" for="bill">Bill <span class="err__msg err__msg--bill"></span></label>
+          <input type="text" name="bill" id="bill" class="app__input app__input--bill" placeholder="0" autocomplete="off">
         </div>
 
         <fieldset class="app__input__group app__input__group--tip">
@@ -47,9 +47,9 @@
           </div>
         </fieldset>
 
-        <div class="app__input__group app__input__group--people">
-          <label class="app__label app__label--people" for="people">Number of People</label>
-          <input type="text" id="people" class="app__input app__input--people" placeholder="0">
+        <div class="app__input__group app__input__group--person">
+          <label class="app__label app__label--person" for="numOfPerson">Number of People<span class="err__msg err__msg--person"></span></label>
+          <input type="text" id="numOfPerson" class="app__input app__input--person" placeholder="0" autocomplete="off">
         </div>
       </div>
 
@@ -59,47 +59,22 @@
             <div class="app__amount__label">
               Tip Amount<span class="app__amount__label__unit">/ person</span>
             </div>
-            <div class="app__amount app__amount--tip">$0.00</div>
+            <div class="app__amount app__amount--tip" id="tip_amount">$0.00</div>
           </div>
 
           <div class="app__amount__group app__amount__group--total">
             <div class="app__amount__label">
               Total<span class="app__amount__label__unit">/ person</span>
             </div>
-            <div class="app__amount app__amount--total">$0.00</div>
+            <div class="app__amount app__amount--total" id="total_amount">$0.00</div>
           </div>
         </div>
         
-        <button type="reset" class="btn btn--reset">Reset</button>
+        <button type="reset" class="btn btn--reset btn--disable" id="btn-reset">Reset</button>
       </div>
     </form>
   </main>
 
-  <!-- Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset -->
-  
-  <!-- <footer class="footer">
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </div>
-  </footer> -->
+  <script src="./src/js/script.js"></script>
 </body>
 </html>

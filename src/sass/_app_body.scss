@@ -24,47 +24,6 @@
     }
   }
 
-  &__label {
-    display: block;
-    padding: 0;
-    color: $veryDarkGrayishCyan;
-    font-size: $font-sm;
-    font-weight: $font-bold;
-    margin-bottom: convertUnit(10, rem);
-
-    &--bill {
-      position: relative;
-      &::after {
-        content: "";
-        position: absolute;
-        top: convertUnit(50, rem);
-        left: convertUnit(16, rem);
-        width: 1rem;
-        height: 1rem;
-        background-image: url("../../images/icon-dollar.svg");
-        background-repeat: no-repeat;
-      }
-    }
-
-    &--tip {
-      margin-bottom: convertUnit(19, rem);
-    }
-
-    &--people {
-      position: relative;
-      &::after {
-        content: "";
-        position: absolute;
-        top: convertUnit(50, rem);
-        left: convertUnit(16, rem);
-        width: 1rem;
-        height: 1rem;
-        background-image: url("../../images/icon-person.svg");
-        background-repeat: no-repeat;
-      }
-    }
-  }
-
   .btn {
     width: 100%;
     height: convertUnit(48, rem);
@@ -90,6 +49,11 @@
         background-color: $strongCyanA;
         color: $DarkCyan;
       }
+
+      &--active, &--active:hover {
+        background-color: $strongCyan;
+        color: $DarkCyan;
+      }
     }
 
     &--reset {
@@ -97,6 +61,9 @@
       background-color: $strongCyan;
       color: $DarkCyan;
       text-transform: uppercase;
+    }
+
+    &--disable {
       opacity: 0.3;
     }
   }

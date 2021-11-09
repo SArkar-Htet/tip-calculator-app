@@ -2,6 +2,10 @@
   font-size: convertUnit(32, rem);
   color: $strongCyan;
 
+  @include breakpoint-up(medium) {
+    font-size: convertUnit(40, rem);
+  }
+
   &__wrapper {
     flex: 1;
     display: flex;

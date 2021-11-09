@@ -2,7 +2,7 @@
 // Primary
 
 $strongCyan: hsl(172, 67%, 45%);
-$strongCyanA: hsla(172, 67%, 45%, 0.5);
+$strongCyanA: hsla(172, 67%, 45%, 0.4);
 // Neutral
 $DarkCyan: hsl(183, 100%, 15%);
 $veryDarkGrayishCyan: hsl(186, 14%, 43%);
@@ -10,6 +10,7 @@ $darkGrayishCyan: hsl(184, 14%, 56%);
 $lightGrayishCyan: hsl(185, 41%, 84%);
 $veryLightGrayishCyan: hsl(189, 41%, 97%);
 $white: hsl(0, 0%, 100%);
+$errMsg: #D16E5B;
 
 // Typography
 $font-sm: convertUnit(16, rem);

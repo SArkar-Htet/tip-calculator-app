@@ -1,65 +1,121 @@
-.app__input {
-  &__wrapper {
-    flex: 1;
-    padding: 0 convertUnit(8, rem);
-
-    @include breakpoint-up(medium) {
-      padding: 0 convertUnit(16, rem);
-    }
-  }
-
-  width: 100%;
-  height: convertUnit(48, rem);
-  padding: 0 convertUnit(16, rem) 0 convertUnit(40, rem);
-  background-color: $veryLightGrayishCyan;
-  font-family: 'Space Mono', monospace;
-  font-size: $font-md;
-  color: $DarkCyan;
-  font-weight: $font-bold;
-  text-align: right;
-  border: 2px solid $veryLightGrayishCyan;
-  border-radius: convertUnit(5, rem);
-  cursor: pointer;
-
-  &:focus {
-    outline: none;
-    border-color: $strongCyan;
-  }
-
-  &__group {
-    border: 0;
+.app {
+  &__label {
+    display: flex;
+    justify-content: space-between;
     padding: 0;
-    margin-bottom: convertUnit(32, rem);
+    color: $veryDarkGrayishCyan;
+    font-size: $font-sm;
+    font-weight: $font-bold;
+    margin-bottom: convertUnit(10, rem);
+
+    &--bill {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: convertUnit(50, rem);
+        left: convertUnit(16, rem);
+        width: 1rem;
+        height: 1rem;
+        background-image: url("../../images/icon-dollar.svg");
+        background-repeat: no-repeat;
+      }
+    }
+
+    &--tip {
+      margin-bottom: convertUnit(19, rem);
+    }
+
+    &--person {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: convertUnit(50, rem);
+        left: convertUnit(16, rem);
+        width: 1rem;
+        height: 1rem;
+        background-image: url("../../images/icon-person.svg");
+        background-repeat: no-repeat;
+      }
+    }
+
+    .err__msg {
+      color: $errMsg;
+    }
   }
 
-  &--tip {
-    padding: 0 convertUnit(16, rem);
+  &__input {
+    &__wrapper {
+      flex: 1;
+      padding: 0 convertUnit(8, rem);
 
+      @include breakpoint-up(medium) {
+        padding: 0 convertUnit(16, rem);
+      }
+    }
+
+    width: 100%;
+    height: convertUnit(48, rem);
+    padding: 0 convertUnit(16, rem) 0 convertUnit(40, rem);
+    background-color: $veryLightGrayishCyan;
+    font-family: 'Space Mono', monospace;
+    font-size: $font-md;
+    color: $DarkCyan;
+    font-weight: $font-bold;
+    text-align: right;
+    border: 2px solid $veryLightGrayishCyan;
+    border-radius: convertUnit(5, rem);
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+      border-color: $strongCyan;
+    }
+
+    &__group {
+      border: 0;
+      padding: 0;
+      margin-bottom: convertUnit(32, rem);
+    }
+
+    &--tip {
+      padding: 0 convertUnit(16, rem);
+
+      @include breakpoint-up(medium) {
+        padding: 0 convertUnit(5, rem);
+        
+        &::placeholder {
+          text-align: center;
+          font-size: 20px;
+        }
+      }
+
+      @include breakpoint-up(large) {
+        &::placeholder {
+          font-size: $font-md;
+        }
+      }
+    }
+
+    &--err {
+      border-color: $errMsg;
+      &:focus {
+        outline: none;
+        border-color: $errMsg;
+      }
+    }
+  }
+
+  &__btn__group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: convertUnit(16, rem);
+  
     @include breakpoint-up(medium) {
-      padding: 0 convertUnit(5, rem);
-      
-      &::placeholder {
-        text-align: center;
-        font-size: 20px;
-      }
+      grid-template-columns: repeat(3, 1fr);
     }
-
-    @include breakpoint-up(large) {
-      &::placeholder {
-        font-size: $font-md;
-      }
-    }
-  }
-}
-
-.app__btn__group {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  justify-content: center;
-  gap: convertUnit(16, rem);
-
-  @include breakpoint-up(medium) {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
