@@ -6,8 +6,8 @@
     flex-direction: column;
     background-color: $white;
     margin-top: convertUnit(41, rem);
-    padding: convertUnit(32, rem) convertUnit(22, rem); 
-    border-radius: convertUnit(22, rem); 
+    padding: convertUnit(32, rem) convertUnit(24, rem); 
+    border-radius: convertUnit(22, rem) convertUnit(22, rem) 0 0; 
   }
 
   &__label {

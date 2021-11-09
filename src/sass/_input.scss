@@ -1,4 +1,8 @@
 .app__input {
+  &__wrapper {
+    padding: 0 convertUnit(8, rem);
+  }
+  
   width: 100%;
   height: convertUnit(48, rem);
   padding: 0 convertUnit(16, rem) 0 convertUnit(40, rem);
