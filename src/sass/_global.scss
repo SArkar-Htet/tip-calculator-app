@@ -16,10 +16,18 @@ body {
   justify-content: center;
   background-color: $lightGrayishCyan;
   font-family: 'Space Mono', monospace;
+
+  @include breakpoint-up(medium) {
+    height: 100vh;
+  }
 }
 
 .header {
   margin-top: convertUnit(50, rem);
+
+  @include breakpoint-up(medium) {
+    margin-top: 0;
+  }
 }
 
 .sr-only {

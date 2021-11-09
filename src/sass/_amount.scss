@@ -3,6 +3,10 @@
   color: $strongCyan;
 
   &__wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: convertUnit(24, rem);
     background-color: $DarkCyan;
     border-radius: 16px;

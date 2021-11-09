@@ -1,6 +1,4 @@
 .app {
-  width: 100%;
-  
   &__body {
     display: flex;
     flex-direction: column;
@@ -8,6 +6,22 @@
     margin-top: convertUnit(41, rem);
     padding: convertUnit(32, rem) convertUnit(24, rem); 
     border-radius: convertUnit(22, rem) convertUnit(22, rem) 0 0; 
+
+    @include breakpoint-up(medium) {
+      flex-direction: row;
+      gap: convertUnit(32, rem);
+      width: 95%;
+      margin: convertUnit(41, rem) auto 0 auto;
+      border-radius: convertUnit(22, rem);
+    }
+
+    @include breakpoint-up(large) {
+      width: 85%;
+    }
+
+    @include breakpoint-up(xLarge) {
+      width: 70%;
+    }
   }
 
   &__label {
