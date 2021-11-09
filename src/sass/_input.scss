@@ -2,7 +2,7 @@
   &__wrapper {
     padding: 0 convertUnit(8, rem);
   }
-  
+
   width: 100%;
   height: convertUnit(48, rem);
   padding: 0 convertUnit(16, rem) 0 convertUnit(40, rem);
@@ -25,13 +25,13 @@
     border: 0;
     padding: 0;
     margin-bottom: convertUnit(32, rem);
-
-    &--tip {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      align-items: center;
-      justify-content: center;
-      gap: convertUnit(16, rem);
-    }
   }
+}
+
+.app__btn__group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: convertUnit(16, rem);
 }
