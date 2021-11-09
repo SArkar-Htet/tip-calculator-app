@@ -1,4 +1,4 @@
-const inputValidation = (billAmount, person) => {
+const tipValidation = (billAmount, person) => {
   let validate;
   if (!billAmount || billAmount === 0) {
     errMsgBill.textContent = "Can't be zero";
@@ -18,4 +18,14 @@ const inputValidation = (billAmount, person) => {
     validate = true;
   }
   return validate;
+}
+
+const inputValidation = (e) => {
+  // 
+}
+
+const onlyNumber = (e) => {
+  let target = e.target;
+  let value = target.value.replace(/[^0-9.]/g, "");
+  target.value = value;
 }

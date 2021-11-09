@@ -13,12 +13,13 @@ const handleClick = (e) => {
   const person = Number(numOfPerson.value);
   const target = e.target;
   let percent = Number(target.textContent.replace(/%/g, "")) / 100;
+  customTip.value = "";
   btnTip.forEach(btn => {
     btn.classList.remove("btn--tip--active");
   });
   target.classList.add("btn--tip--active");
 
-  if (inputValidation(billAmount, person)) {
+  if (tipValidation(billAmount, person)) {
     calculateTip(billAmount, percent, person);
     resetBtn.classList.remove("btn--disable");
   }
