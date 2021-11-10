@@ -41,14 +41,14 @@
       box-shadow: none;
     }
 
+    &:hover {
+      background-color: $strongCyanA;
+      color: $DarkCyan;
+    }
+
     &--tip {
       background-color: $DarkCyan;
       color: $white;
-
-      &:hover {
-        background-color: $strongCyanA;
-        color: $DarkCyan;
-      }
 
       &--active, &--active:hover {
         background-color: $strongCyan;
@@ -66,6 +66,10 @@
     &--disable {
       opacity: 0.3;
       cursor: not-allowed;
+
+      &:hover {
+        background-color: $strongCyan;
+      }
     }
   }
 }
