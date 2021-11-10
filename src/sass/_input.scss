@@ -67,7 +67,7 @@
     border-radius: convertUnit(5, rem);
     cursor: pointer;
 
-    &:focus {
+    &:focus, &:hover {
       outline: none;
       border-color: $strongCyan;
     }
