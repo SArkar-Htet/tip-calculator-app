@@ -24,3 +24,38 @@ const handleClick = (e) => {
     resetBtn.classList.remove("btn--disable");
   }
 }
+
+const handleInput = (e) => {
+  onlyNumber(e);
+  let target = e.target;
+  let name = target.name;
+  let value = Number(target.value);
+  let billAmount = name === "bill" ? value : Number(bill.value);
+  let person = name === "numOfPerson" ? value : Number(numOfPerson.value);
+  let otherVal = name === "bill" ? person : billAmount;
+  let errMsg = name === "bill" ? errMsgBill : errMsgPerson;
+  let errInput = name === "bill" ? bill : numOfPerson;
+  let percent;
+
+  btnTip.forEach(btn => {
+    if (btn.classList.contains("btn--tip--active")) {
+      percent = Number(btn.textContent.replace(/%/g, "")) / 100;
+    }
+  });
+
+  if (!percent) {
+    percent = Number(customTip.value) / 100;
+  }
+  
+  if (value && value !== 0) {
+    errMsg.innerHTML = "";
+    errInput.classList.remove("app__input--err");
+    if (otherVal > 0 && percent) {
+      calculateTip(billAmount, percent, person);
+      resetBtn.classList.remove("btn--disable");
+    }
+  } else {
+    tipAmount.textContent = "$0.00";
+    totalAmount.textContent = "$0.00";
+  }
+}
