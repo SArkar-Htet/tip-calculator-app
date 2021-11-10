@@ -19,18 +19,4 @@ numOfPerson.addEventListener("input", handleInput);
 
 resetBtn.addEventListener("click", reset);
 
-customTip.addEventListener("input", (e) => {
-  onlyNumber(e);
-
-  const value = Number(e.target.value) / 100;
-  let billAmount = Number(bill.value);
-  let person = Number(numOfPerson.value);
-  btnTip.forEach(btn => {
-    btn.classList.remove("btn--tip--active");
-  });
-
-  if (tipValidation(billAmount, person)) {
-    calculateTip(billAmount, value, person);
-    resetBtn.classList.remove("btn--disable");
-  }
-})
+customTip.addEventListener("input", handleCustomTip);

@@ -20,12 +20,28 @@ const tipValidation = (billAmount, person) => {
   return validate;
 }
 
-const inputValidation = (e) => {
-  // 
-}
-
 const onlyNumber = (e) => {
   let target = e.target;
   let value = target.value.replace(/[^0-9.]/g, "");
   target.value = value;
+}
+
+const inputValidation = (e) => {
+  onlyNumber(e);
+  let target = e.target;
+  let name = target.name;
+  let value = target.value;
+  let billAmount = name === "bill" ? value : Number(bill.value);
+  let person = name === "numOfPerson" ? value : Number(numOfPerson.value);
+  let otherVal = name === "bill" ? person : billAmount;
+  let errMsg = name === "bill" ? errMsgBill : errMsgPerson;
+  let errInput = name === "bill" ? bill : numOfPerson;
+  if (value && value > 0) {
+    errMsg.innerHTML = "";
+    errInput.classList.remove("app__input--err");
+    if (otherVal > 0) {
+      return true;
+    }
+  }
+  return false;
 }
