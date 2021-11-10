@@ -16,6 +16,7 @@ body {
   justify-content: center;
   background-color: $lightGrayishCyan;
   font-family: 'Space Mono', monospace;
+  font-size: $font-xs;
 
   @include breakpoint-up(medium) {
     height: 100vh;

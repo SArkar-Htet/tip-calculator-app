@@ -1,6 +1,5 @@
 // Colors
 // Primary
-
 $strongCyan: hsl(172, 67%, 45%);
 $strongCyanA: hsl(172, 96%, 78%);
 // Neutral
@@ -13,8 +12,12 @@ $white: hsl(0, 0%, 100%);
 $errMsg: #D16E5B;
 
 // Typography
-$font-sm: convertUnit(16, rem);
+$font-xxs: convertUnit(14, rem);
+$font-xs: convertUnit(16, rem);
+$font-sm: convertUnit(20, rem);
 $font-md: convertUnit(24, rem);
+$font-lg: convertUnit(32, rem);
+$font-xlg: convertUnit(40, rem);
 
 // Font Weight
 $font-light: 400;

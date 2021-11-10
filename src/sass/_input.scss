@@ -4,7 +4,6 @@
     justify-content: space-between;
     padding: 0;
     color: $veryDarkGrayishCyan;
-    font-size: $font-sm;
     font-weight: $font-bold;
     margin-bottom: convertUnit(10, rem);
 
@@ -87,7 +86,7 @@
         
         &::placeholder {
           text-align: center;
-          font-size: 20px;
+          font-size: $font-sm;
         }
       }
 

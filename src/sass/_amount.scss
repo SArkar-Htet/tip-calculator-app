@@ -1,9 +1,9 @@
 .app__amount {
-  font-size: convertUnit(32, rem);
+  font-size: $font-lg;
   color: $strongCyan;
 
   @include breakpoint-up(medium) {
-    font-size: convertUnit(40, rem);
+    font-size: $font-xlg;
   }
 
   &__wrapper {
@@ -29,7 +29,7 @@
 
     &__unit {
       display: block;
-      font-size: convertUnit(14, rem);
+      font-size: $font-xxs;
       color: $darkGrayishCyan;
     }
   }
